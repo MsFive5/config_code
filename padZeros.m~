@@ -1,0 +1,19 @@
+function output = padZeros(input)
+time = input(:,1);
+diffTime = find(diff(time)>25);
+output = [];
+% while(length(find(diffTime>25)))
+%     diffTime = find(diff(time)>25);
+%     padLength = floor(diffTime(1)/25); 
+%     output = [input(1:diffTime(1),:); zeros(padLength, size(input,2));input(diffTime(1)+1:end,:)];
+%     
+% end
+
+for n = 1:length(diffTime)
+    padLength = floor(diffTime(n)/25); 
+    output = [input(1:n,:); zeros(padLength, size(input,2));input(n+1:end,:)];
+    time = [input(1:n,:); input(n,1)+25:25:input(n,1)+p;input(n,1);input(n+1:end,1)];
+    diffTime = find(diff(time)>25);
+end
+time = time(1):25:time(1)+(length(output)-1)*25;
+output(:, 1) = time;

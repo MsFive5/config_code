@@ -1,0 +1,4 @@
+% config file
+OrientationCorrection   True
+NaiveBayesFilterThresh  1.5
+DynamicTimeWarpingThresh    3

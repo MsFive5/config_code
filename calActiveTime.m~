@@ -1,0 +1,4 @@
+% This will calculate the total active time including 
+function aTimes = calActiveTime(data, Threshold)
+% data : input data. Here we use accel data from both left and right. 
+% Thres

@@ -1,0 +1,5 @@
+;MATFile=sample.mat
+;labeled activity (the number corresponds to the time in seconds in the file, rather than index)
+walk=[58.400000 70.150000]
+walk=[106.650000 118.375000]
+walk=[152.425000 164.650000]
